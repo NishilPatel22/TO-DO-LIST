@@ -7,6 +7,7 @@ const checkLocal = localStorage.getItem("Checked");
 if (dataInLocal !== null) {
   toDoListArray = JSON.parse(dataInLocal);
 
+  localStorage.setItem("Checked", JSON.stringify(taskArray));
   const checkedTask = JSON.parse(localStorage.getItem("Checked"));
   createTaskDesign(toDoListArray, checkedTask);
 }
@@ -24,7 +25,7 @@ function saveTask() {
   
 }
 
-function createTaskDesign(tasks, checkedTask = []) {
+function createTaskDesign(tasks, checkedTask) {
   document.getElementById("taskList").innerHTML = "";
 
   tasks.forEach(function (task, idx) {
