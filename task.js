@@ -7,7 +7,6 @@ const checkLocal = localStorage.getItem("Checked");
 if (dataInLocal !== null) {
   toDoListArray = JSON.parse(dataInLocal);
 
-  localStorage.setItem("Checked", JSON.stringify(taskArray));
   const checkedTask = JSON.parse(localStorage.getItem("Checked"));
   createTaskDesign(toDoListArray, checkedTask);
 }
@@ -102,7 +101,7 @@ function createTaskDesign(tasks, checkedTask) {
         completeBtn.style.backgroundColor = "";
       }
       localStorage.setItem("Checked", JSON.stringify(checkedTask));
-      location.reload(true);
+      location.reload();
     });
 
     checkBox.taskID = task.taskID;
