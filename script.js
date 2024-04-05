@@ -81,7 +81,7 @@ function temp() {
     .then((res) => res.json())
     .then(
       (data) =>
-        (document.querySelector("#tem").innerText = data.main.temp + "°c")
+        (document.querySelector("#tem").innerText = ((data.main.temp)- 273.15).toFixed(2) + "°c")
     )
     .catch((err) => console.log("Somting Went Wrong"));
 }
