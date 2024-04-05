@@ -24,7 +24,7 @@ function saveTask() {
   
 }
 
-function createTaskDesign(tasks, checkedTask) {
+function createTaskDesign(tasks, checkedTask = []) {
   document.getElementById("taskList").innerHTML = "";
 
   tasks.forEach(function (task, idx) {
