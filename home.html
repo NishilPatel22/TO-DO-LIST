@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body onload="getGIF(), temp(), callTime()">
+    <!-- <body> -->
+    <div id="background">
+    <nav class="navMenu">
+      <a href="profile.html" id="profileLink">Profile</a>
+      <p id="tem"></p>
+      <span></span>
+      <p id="time"></p>
+      <a href="login.html" id="logoutBtn">Logout</a>
+    </nav>
+    
+  </div>
+    <p id="tem"></p>
+    <span></span>
+    <p id="time"></p>
+    <div id="details"></div>
+    <div id="displayError"></div>
+
+    <div class="mainDiv">
+      <div class="gify">
+        <img id="gif" alt="gifs" />
+        <div>
+          <h1 id="taskInfo">Completed Task</h1>
+          <ul id="completeTaskList"></ul>
+          <p id="showCount"></p>
+        </div>
+</div>
+      <div id="addTask">
+        <input type="text" id="taskTextBox" placeholder="Add a new task"/>
+        <input type="button" value="Add" id="taskAddBtn" onclick="saveTask()">
+        <ul id="taskList"></ul>
+      </div>
+    </div>
+
+   <script src="script.js"></script>
+    <script src="task.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div id="displayError"> </div>
+    <div class="container">        
+        <form class="register" onsubmit="return false">
+            <h1>Register</h1>
+            <hr>
+            <label for="userName">Name</label>
+            <input type="text" id="userName" name="user" placeholder="Enter Your Name"><br>
+            <label for="userEmail">Email</label>
+            <input type="text" id="userEmail" name="email" placeholder="Enter Your Email"><br>
+            <label for="userMobile">Mobile</label>
+            <input type="text" id="userMobile" name="mobile" placeholder="Enter Your Number"><br>
+            <label for="userGender">Gender</label>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female<br>
+            <label for="userDob">DOB</label>
+            <input type="date" id="userDob" name="dob"><br>
+            <label for="userPassword">Password</label>
+            <input type="password" id="userPassword" name="password" placeholder="Enter Your Password"><br>
+            <label for="login">Already Registered ?</label>
+            <a href="login.html">Login</a>
+            <button type="submit" id="submitBtn" name="submit" onclick="register()">Register</button>
+            <p id="error" style= "color:red"> </p>  
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body onload = "getData()" >
+    <div class="container" id="display">
+      <p id="username1"></p>
+      <p id="userEmail1"></p>
+      <p id="userMobile1"></p>
+      <p id="userGender1"></p>
+      <p id="userDob1"></p>
+      <button  onclick="toggle()" id="editBtn">Edit</a>
+      <button  onclick="goBack()" id="backBtn">Back</a>
+  </div>
+
+  <div class="container" id="update">
+    <form  id="updateForm" onsubmit="return false"> 
+        <label for="userName">Name</label>
+        <input type="text" id="userName" name="user" placeholder="Enter Your Name"><br>
+        <label for="userEmail">Email</label>
+        <input type="text" id="userEmail" name="email" placeholder="Enter Your Email"><br>
+        <label for="userMobile">Mobile</label>
+        <input type="text" id="userMobile" name="mobile" placeholder="Enter Your Number"><br>
+      <button type="submit" id="updateBtn" onclick="updateData()">Update</button>
+      <button  onclick="toggle()" id="backBtn">Back</button>
+        <p id="error" style= "color:red"> </p>
+    </form>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
