@@ -57,7 +57,6 @@ function updateData() {
   const userNameValue = document.querySelector("#userName").value;
   const userEmailValue = document.querySelector("#userEmail").value;
   const userMobileValue = document.querySelector("#userMobile").value;
-  console.log(userEmailValue);
 
   if (userNameValue == null || userNameValue == "") {
     document.querySelector("#error").innerText = "Enter Name First";
@@ -105,7 +104,6 @@ async function getGIF() {
     "https://g.tenor.com/v1/search?q=excited&key=LIVDSRZULELA&limit=8"
   );
   const result = await response.json();
-  console.log(result.results[0]);
   const gifArray = result.results;
   let randomIndex = Math.floor(Math.random() * gifArray.length);
   document.getElementById("gif").src =

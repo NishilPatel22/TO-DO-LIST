@@ -1,13 +1,16 @@
 let toDoListArray = [];
 const taskArray = [];
+
 const showCount = document.querySelector("#showCount");
+
 const dataInLocal = localStorage.getItem("taskList");
 const checkLocal = localStorage.getItem("Checked");
 
 if (dataInLocal !== null) {
   toDoListArray = JSON.parse(dataInLocal);
-
-  const checkedTask = JSON.parse(localStorage.getItem("Checked")) ? JSON.parse(localStorage.getItem("Checked")) : [];
+  const checkedTask = JSON.parse(localStorage.getItem("Checked"))
+    ? JSON.parse(localStorage.getItem("Checked"))
+    : [];
   createTaskDesign(toDoListArray, checkedTask);
 }
 
@@ -21,12 +24,11 @@ function saveTask() {
   localStorage.setItem("taskList", JSON.stringify(toDoListArray));
   location.reload();
   createTaskDesign([toDOObj]);
-  
 }
 
 function createTaskDesign(tasks, checkedTask) {
   document.getElementById("taskList").innerHTML = "";
-  
+
   tasks.forEach(function (task, idx) {
     const textDiv = document.createElement("div");
     const textBox = document.createElement("input");
@@ -109,13 +111,13 @@ function createTaskDesign(tasks, checkedTask) {
     taskList.appendChild(textDiv);
 
     if (checkedTask) {
-      for (let i = 0; i < checkedTask.length; i++) {
-        if (checkedTask[i] == taskList.children[idx].children[1].value) {
+      for (const element of checkedTask) {
+        if (element == taskList.children[idx].children[1].value) {
           taskList.children[idx].firstChild.checked = true;
           completeBtn.style.backgroundColor = "orange";
         }
-        if(document.getElementsByClassName('deleteBtn').clicked == true){
-          checkedTask.splice(index, 1);
+        if (document.getElementsByClassName("deleteBtn").clicked == true) {
+          checkedTask.splice(idx, 1);
           localStorage.setItem("Checked", JSON.stringify(checkedTask));
         }
       }
