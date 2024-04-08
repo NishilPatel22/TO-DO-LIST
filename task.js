@@ -26,10 +26,10 @@ function saveTask() {
   createTaskDesign([toDOObj]);
 }
 
-function createTaskDesign(tasks, checkedTask) {
+function createTaskDesign(toDoListArray, checkedTask) {
   document.getElementById("taskList").innerHTML = "";
 
-  tasks.forEach(function (task, idx) {
+  toDoListArray.forEach(function (task, idx) {
     const textDiv = document.createElement("div");
     const textBox = document.createElement("input");
     const deleteBtn = document.createElement("input");
@@ -115,10 +115,6 @@ function createTaskDesign(tasks, checkedTask) {
         if (element == taskList.children[idx].children[1].value) {
           taskList.children[idx].firstChild.checked = true;
           completeBtn.style.backgroundColor = "orange";
-        }
-        if (document.getElementsByClassName("deleteBtn").clicked == true) {
-          checkedTask.splice(idx, 1);
-          localStorage.setItem("Checked", JSON.stringify(checkedTask));
         }
       }
     }

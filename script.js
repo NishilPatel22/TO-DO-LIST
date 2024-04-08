@@ -2,7 +2,7 @@ function register() {
   const emailValidation =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const passwordValidation =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{12}$/;
 
   const userNameValue = document.querySelector("#userName").value;
   const userEmailValue = document.querySelector("#userEmail").value;
@@ -24,7 +24,7 @@ function register() {
   } else if (!userDobValue) {
     document.querySelector("#error").innerText = "Select DOB First";
   } else if (!userPasswordValue.match(passwordValidation)) {
-    document.querySelector("#error").innerText = "Enter Password First";
+    document.querySelector("#error").innerText = " Password Length Must be 12 and contain [capital letter, small letter,special character,number]";
   } else {
     localStorage.setItem("userName", userNameValue);
     localStorage.setItem("userEmail", userEmailValue);
