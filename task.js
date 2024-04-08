@@ -19,7 +19,7 @@ function saveTask() {
   };
   toDoListArray.push(toDOObj);
   localStorage.setItem("taskList", JSON.stringify(toDoListArray));
-  location.reload(true);
+  // location.reload(true);
   createTaskDesign([toDOObj]);
   
 }
@@ -58,7 +58,7 @@ function createTaskDesign(tasks, checkedTask) {
       if (index !== -1) {
         obj.taskName = textBox.value;
         localStorage.setItem("taskList", JSON.stringify(toDoListArray));
-        location.reload(true);
+        // location.reload(true);
       }
     });
     saveBtn.taskID = task.taskID;
@@ -75,7 +75,7 @@ function createTaskDesign(tasks, checkedTask) {
       checkedTask.splice(index, 1);
       localStorage.setItem("taskList", JSON.stringify(toDoListArray));
       localStorage.setItem("Checked", JSON.stringify(checkedTask));
-      location.reload(true);
+      // location.reload(true);
     });
     deleteBtn.taskID = task.taskID;
 
@@ -101,7 +101,7 @@ function createTaskDesign(tasks, checkedTask) {
         completeBtn.style.backgroundColor = "";
       }
       localStorage.setItem("Checked", JSON.stringify(checkedTask));
-      location.reload();
+      // location.reload();
     });
 
     checkBox.taskID = task.taskID;
