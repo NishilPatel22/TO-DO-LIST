@@ -75,7 +75,7 @@ function createTaskDesign(tasks, checkedTask) {
       checkedTask.splice(index, 1);
       localStorage.setItem("taskList", JSON.stringify(toDoListArray));
       localStorage.setItem("Checked", JSON.stringify(checkedTask));
-      // location.reload(true);
+      location.reload();
     });
     deleteBtn.taskID = task.taskID;
 
@@ -101,7 +101,7 @@ function createTaskDesign(tasks, checkedTask) {
         completeBtn.style.backgroundColor = "";
       }
       localStorage.setItem("Checked", JSON.stringify(checkedTask));
-      // location.reload();
+      location.reload();
     });
 
     checkBox.taskID = task.taskID;
