@@ -114,6 +114,10 @@ function createTaskDesign(tasks, checkedTask) {
           taskList.children[idx].firstChild.checked = true;
           completeBtn.style.backgroundColor = "orange";
         }
+        if(document.getElementsByClassName('deleteBtn').clicked == true){
+          checkedTask.splice(index, 1);
+          localStorage.setItem("Checked", JSON.stringify(checkedTask));
+        }
       }
     }
     showCount.innerHTML = checkedTask.length;
