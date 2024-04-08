@@ -58,7 +58,7 @@ function createTaskDesign(tasks, checkedTask) {
       if (index !== -1) {
         obj.taskName = textBox.value;
         localStorage.setItem("taskList", JSON.stringify(toDoListArray));
-        // location.reload(true);
+        location.reload(true);
       }
     });
     saveBtn.taskID = task.taskID;
