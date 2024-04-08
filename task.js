@@ -1,6 +1,6 @@
 let toDoListArray = [];
 const taskArray = [];
-
+const taskList = document.getElementById("taskList")
 const showCount = document.querySelector("#showCount");
 
 const dataInLocal = localStorage.getItem("taskList");
@@ -27,7 +27,7 @@ function saveTask() {
 }
 
 function createTaskDesign(toDoListArray, checkedTask) {
-  document.getElementById("taskList").innerHTML = "";
+  taskList.innerHTML = "";
 
   toDoListArray.forEach(function (task, idx) {
     const textDiv = document.createElement("div");
