@@ -19,7 +19,7 @@ function saveTask() {
   };
   toDoListArray.push(toDOObj);
   localStorage.setItem("taskList", JSON.stringify(toDoListArray));
-  // location.reload(true);
+  location.reload();
   createTaskDesign([toDOObj]);
   
 }
